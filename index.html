@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Viyan Stays — Coming Soon</title>
+
+  <!-- Google Fonts: Playfair Display (serif) + Inter (sans-serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="./css/styles.css" />
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'forest-green': '#1A4A28',
+            'olive-green': '#8CB83E',
+            'soft-cream': '#F4F2F1',
+            'text-dark': '#1E1E1E',
+          },
+          fontFamily: {
+            heading: ['Playfair Display', 'serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-[#1A4A28] text-white font-body min-h-screen overflow-x-hidden relative">
+
+  <!-- ========== AMBIENT CORNER DECOR ========== -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+  <div class="ambient-ring"></div>
+  <div class="ambient-ring-2"></div>
+
+  <!-- ========== HEADER / LOGO ========== -->
+  <header class="relative z-10 pt-6 pb-4 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col items-center md:flex-row md:justify-between gap-4">
+
+      <!-- Logo Badge (centered on mobile, left on desktop) -->
+      <div class="logo-badge rounded-2xl p-4 max-w-[180px] w-full">
+        <img
+          src="./public/images/logo150.png"
+          alt="Viyan Stays"
+          class="w-full h-auto object-contain"
+          onerror="this.src='./logo150.png'"
+        />
+      </div>
+
+      <!-- Location Link (right side on desktop) -->
+      <a
+        href="https://share.google/HJdCvf6WZDXFfL0yF"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-olive-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+        <span>Coimbatore, IN</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="relative z-10 pt-10 pb-16 px-4 sm:px-6 lg:px-8 text-center">
+    <div class="max-w-4xl mx-auto">
+
+      <!-- Glossy "COMING SOON" Headline -->
+      <h1 class="glossy-shine font-heading text-5xl md:text-7xl font-bold tracking-wider mb-8">
+        COMING SOON
+      </h1>
+
+      <!-- Countdown Timer -->
+      <div id="countdown" class="flex items-center justify-center gap-2 sm:gap-4 flex-wrap mb-10">
+        <div class="countdown-card rounded-xl p-4 sm:p-5 text-center min-w-[75px] sm:min-w-[90px]">
+          <div class="countdown-digit text-3xl sm:text-4xl md:text-5xl font-bold mb-1">15</div>
+          <div class="text-xs sm:text-sm text-white/60 uppercase tracking-wider">Days</div>
+        </div>
+        <div class="countdown-card rounded-xl p-4 sm:p-5 text-center min-w-[75px] sm:min-w-[90px]">
+          <div class="countdown-digit text-3xl sm:text-4xl md:text-5xl font-bold mb-1">00</div>
+          <div class="text-xs sm:text-sm text-white/60 uppercase tracking-wider">Hours</div>
+        </div>
+        <div class="countdown-card rounded-xl p-4 sm:p-5 text-center min-w-[75px] sm:min-w-[90px]">
+          <div class="countdown-digit text-3xl sm:text-4xl md:text-5xl font-bold mb-1">00</div>
+          <div class="text-xs sm:text-sm text-white/60 uppercase tracking-wider">Minutes</div>
+        </div>
+        <div class="countdown-card rounded-xl p-4 sm:p-5 text-center min-w-[75px] sm:min-w-[90px]">
+          <div class="countdown-digit text-3xl sm:text-4xl md:text-5xl font-bold mb-1">00</div>
+          <div class="text-xs sm:text-sm text-white/60 uppercase tracking-wider">Seconds</div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+
+        <!-- WhatsApp CTA -->
+        <a
+          id="whatsapp-inquiry"
+          href="https://wa.me/919600620400"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="whatsapp-glow inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold px-8 py-4 rounded-xl shadow-[0_0_25px_rgba(37,211,102,0.5)] text-lg transition-all duration-300 hover:scale-105"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12.04 2.01C6.49 2.01 2.03 6.47 2.03 12c0 2.12.56 4.16 1.6 5.92L2 22l4.22-1.11c1.64.89 3.54 1.36 5.82 1.36 5.55 0 10.01-4.46 10.01-9.99S17.59 2.01 12.04 2.01zm5.46 13.52c-.3.08-1.77.84-3.24.78-.13-.01-.25-.07-.35-.07-.1 0-.26.07-.35.07-.19.06-1.75.82-1.75.82-.19-.38-.38-.77-.57-1.16-.18-.38-.46-.81-.46-1.2 0-.38.26-.6.55-.81.3.05.67.12 1.02.06.35-.06.72-.35 1.02-.15.3.01 1.77.66 2.52 1.55.75.89.93 1.42.93 1.55-.01.08.08.35.08.35z"
+            />
+          </svg>
+          Inquire on WhatsApp
+        </a>
+
+        <!-- Google Maps Link -->
+        <a
+          href="https://share.google/HJdCvf6WZDXFfL0yF"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-4 rounded-xl border border-white/20 transition-all duration-300 hover:scale-105"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-olive-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          Visit on Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== INFINITE MARQUEE ROOM GALLERY ========== -->
+  <!-- Dynamically populated by js/app.js via discoverRoomImages() -->
+  <section class="relative z-10 pb-16 overflow-hidden">
+    <div class="marquee-track" id="room-marquee"></div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="relative z-10 pb-6 px-4 text-center">
+    <p class="text-white/40 text-xs">&copy; 2026 Viyan Stays. All rights reserved.</p>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="./js/app.js"></script>
+</body>
+</html>

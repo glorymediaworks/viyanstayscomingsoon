@@ -1,0 +1,203 @@
+/* ==========================================================================
+   Viyan Stays — Coming Soon
+   Glossy Text Shine, Infinite Marquee, Ambient Decor Keyframes
+   ========================================================================== */
+
+/* ———————————————— Theme Color Tokens ———————————————— */
+:root {
+  --color-forest-green: #1A4A28;
+  --color-olive-green: #8CB83E;
+  --color-soft-cream: #F4F2F1;
+  --color-text-white: #FFFFFF;
+  --color-text-dark: #1E1E1E;
+  --color-golden: #C9A84C;
+}
+
+/* ———————————————— Glossy Text Shine Animation ———————————————— */
+@keyframes text-shine {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.glossy-shine {
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #8CB83E 25%,
+    #ffffff 50%,
+    #8CB83E 75%,
+    #ffffff 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text-shine 4s ease-in-out infinite;
+}
+
+/* ———————————————— Infinite Marquee Scroll ———————————————— */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  gap: 1.5rem;
+  animation: marquee-scroll 30s linear infinite;
+  width: max-content;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ———————————————— Ambient Corner Decor ———————————————— */
+.ambient-glow-1 {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ambient-glow-2 {
+  position: fixed;
+  bottom: -80px;
+  right: -80px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ambient-ring {
+  position: fixed;
+  top: 5%;
+  right: 3%;
+  width: 120px;
+  height: 120px;
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  animation: float-rotate 20s linear infinite;
+}
+
+.ambient-ring-2 {
+  position: fixed;
+  bottom: 10%;
+  left: 5%;
+  width: 80px;
+  height: 80px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  animation: float-rotate 25s linear infinite reverse;
+}
+
+@keyframes float-rotate {
+  0% {
+    transform: rotate(0deg) translateY(0);
+  }
+  33% {
+    transform: rotate(120deg) translateY(-6px);
+  }
+  66% {
+    transform: rotate(240deg) translateY(4px);
+  }
+  100% {
+    transform: rotate(360deg) translateY(0);
+  }
+}
+
+/* ———————————————— Glassmorphism Countdown Cards ———————————————— */
+.countdown-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(140, 184, 62, 0.25);
+  box-shadow: 0 8px 32px rgba(26, 74, 32, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.countdown-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(140, 184, 62, 0.2);
+}
+
+.countdown-digit {
+  background: linear-gradient(135deg, #F4F2F1 0%, #8CB83E 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ———————————————— Logo Badge Enhancement ———————————————— */
+.logo-badge {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px rgba(26, 74, 32, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-badge:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px rgba(26, 74, 32, 0.35);
+}
+
+/* ———————————————— WhatsApp Glow Pulse ———————————————— */
+@keyframes whatsapp-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(37, 211, 102, 0.6);
+  }
+}
+
+.whatsapp-glow {
+  animation: whatsapp-glow 2s ease-in-out infinite;
+}
+
+/* ———————————————— Scrollbar ———————————————— */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(26, 74, 32, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-olive-green);
+  border-radius: 3px;
+}
+
+/* ———————————————— Responsive ———————————————— */
+@media (max-width: 640px) {
+  .marquee-track {
+    gap: 1rem;
+    animation-duration: 20s;
+  }
+}
