@@ -38,6 +38,22 @@
       },
     };
   </script>
+
+  <!-- JSON-LD Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Viyan Stays",
+    "url": "https://viyanstays.com",
+    "telephone": "+919600620400",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Coimbatore",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
 </head>
 <body class="bg-[#1A4A28] text-white font-body min-h-screen overflow-x-hidden relative">
 
@@ -127,6 +143,15 @@
           Inquire on WhatsApp
         </a>
 
+        <!-- Phone Number CTA -->
+        <a href="tel:+919600620400" class="whatsapp-glow inline-flex items-center gap-3 bg-[#84CC16] hover:bg-[#7AC91A] text-white font-bold px-8 py-4 rounded-xl shadow-[0_0_25px_rgba(132,201,26,0.5)] text-lg transition-all duration-300 hover:scale-105">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2L2 12l10 10 10-10z"/>
+            <circle cx="12" cy="12" r="2" fill="currentColor"/>
+          </svg>
+          Call Us: +91 9600620400
+        </a>
+
         <!-- Google Maps Link -->
         <a
           href="https://share.google/HJdCvf6WZDXFfL0yF"
@@ -155,6 +180,8 @@
   <!-- ========== FOOTER ========== -->
   <footer class="relative z-10 pb-6 px-4 text-center">
     <p class="text-white/40 text-xs">&copy; 2026 Viyan Stays. All rights reserved.</p>
+    <a href="privacy-policy.html" class="text-white ml-4">Privacy Policy</a>
+    <a href="index.html" class="text-white ml-4">Back to Home</a>
   </footer>
 
   <!-- ========== SCRIPTS ========== -->
