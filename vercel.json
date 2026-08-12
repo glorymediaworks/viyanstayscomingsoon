@@ -1,5 +1,7 @@
 {
+
   "version": 2,
+<<<<<<< HEAD
   "cleanUrls": true,
   "trailingSlash": false,
   "routes": [
@@ -7,3 +9,32 @@
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
+=======
+
+  "builds": [
+
+    {
+
+      "src": "**",
+
+      "use": "@vercel/static"
+
+    }
+
+  ],
+
+  "routes": [
+
+    {
+
+      "src": "/(.*)",
+
+      "dest": "/$1"
+
+    }
+
+  ]
+
+}0 
+
+>>>>>>> ddb19fbfa71a8e26f80250ae484db0d25a328145
