@@ -1,0 +1,86 @@
+/* Phone and tablet layouts */
+@media(max-width:991px){
+html{scroll-padding-top:80px}
+.main-header .menu-sidebar{display:none}
+.main-header .header-inner{min-height:68px}
+.main-menu .navbar-header .navbar-toggle{width:48px;height:48px;padding:10px}
+.main-menu .navbar-collapse{max-height:calc(100dvh - 80px);overflow-y:auto;background:#18251e}
+.main-menu .navigation>li>a{padding:12px 20px!important;color:white!important}
+.main-slider-area .slider-item{padding:100px 0 48px}
+.slider-content{padding:0 0 24px;margin:0}
+.slider-content h1{font-size:40px;line-height:1.12;margin-bottom:20px;max-width:550px}
+.slider-content .sub-title{font-size:14px;margin-bottom:14px}
+.slider-content .sub-title i{display:none}
+.slider-image img{height:300px}
+.main-slider-dots{margin:0 auto;padding:0 0 24px}
+.slider-shapes{display:none}
+.hotel-item{flex-direction:column-reverse}
+.hotel-item .image{width:100%;max-width:none}
+.hotel-item .image img{height:260px;min-height:0}
+.hotel-item .content{padding:24px}
+}
+@media(max-width:575px){
+body{font-size:16px;line-height:1.65;padding-bottom:76px}
+.container{padding-left:20px;padding-right:20px}
+.main-header .container{padding-left:16px;padding-right:16px}
+.main-header .mobile-logo img{max-width:165px}
+.main-header .mobile-logo{margin:12px 0!important}
+.main-header .menu-btns{display:none}
+.main-slider-area .slider-item{padding-top:92px;padding-bottom:28px}
+.slider-content{min-height:244px}
+.slider-content h1{font-size:36px}
+.slider-image img{height:240px;border-radius:8px}
+section[id]{padding-top:48px!important;padding-bottom:32px!important}
+.section-title{margin-bottom:26px!important}
+.section-title h2{font-size:30px;line-height:1.18}
+.section-title .sub-title{font-size:14px;margin-bottom:10px}
+h3{font-size:25px}h4{font-size:22px}
+.theme-btn{min-height:46px;padding:11px 22px;line-height:24px}
+.property-snapshot-area{padding:24px 0 12px}
+.property-snapshot-scroll .row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;min-width:0}
+.property-snapshot-scroll .row>.col{width:auto;padding:0 4px}
+.property-snapshot-area .snapshot-item{padding:12px 0;margin-bottom:8px}
+.property-snapshot-area .snapshot-number{font-size:34px;margin-bottom:6px}
+.property-snapshot-area .snapshot-label{font-size:10px;letter-spacing:.7px}
+.about-image-part{margin-bottom:28px!important}
+.about-image-part .top-part>img{width:78%;height:240px}
+.about-image-part .bottom-part>img{height:170px}
+.about-content-part .feature-list{margin:20px 0}
+.room-item{margin-bottom:24px}
+.room-item .image img{height:230px}
+.room-item .content{padding:22px!important}
+#amenities .row>.col-xl-3{width:50%;padding-left:8px;padding-right:8px}
+#amenities .feature-item{display:block;margin-bottom:16px;padding:16px 10px;background:white;border-radius:8px;height:calc(100% - 16px)}
+#amenities .feature-item .icon{margin:0 0 10px;font-size:30px}
+#amenities .feature-item .icon i{font-size:30px}
+#amenities .feature-item h4{font-size:18px;line-height:1.25;margin-bottom:8px}
+#amenities .feature-item p{font-size:14px;line-height:1.5;margin:0}
+.hotel-carousel-active .hotel-item{margin-left:0;margin-right:0}
+#gallery .blog-grid-item{margin-bottom:22px}
+#gallery .blog-grid-item .image img{height:220px}
+#gallery .blog-grid-item .blog-content{padding:20px}
+.viyan-photo-grid{gap:10px;margin:8px 0 24px}
+.viyan-photo-link span{font-size:13px;line-height:1.3;padding:30px 10px 12px}
+.location-highlight-item{padding:14px;margin-bottom:12px}
+.contact-page-map iframe{height:300px!important}
+.booking-search{padding:24px!important;margin-bottom:32px!important}
+.testimonial-item .text{font-size:20px;line-height:1.5}
+.faq-image-part{margin-bottom:28px!important}
+.faq-image-part>img{height:280px}
+.accordion-button{font-size:17px!important;padding:18px 12px!important}
+.viyan-cta-area .cta-btns{display:flex;gap:10px;flex-wrap:wrap}
+.viyan-cta-area .cta-btns .theme-btn{margin:0}
+.main-footer{padding-top:42px!important}
+.main-footer .footer-widget{margin-bottom:28px}
+.main-footer .footer-title{margin-bottom:16px}
+.main-footer .footer-bottom{margin-top:0!important}
+.scroll-top{bottom:88px}
+.viyan-mobile-booking{position:fixed;z-index:1000;bottom:0;left:0;right:0;display:flex;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#fff;box-shadow:0 -3px 20px #0002}
+.viyan-mobile-booking a{flex:1;display:flex;align-items:center;justify-content:center;min-height:46px;border-radius:6px;background:#184c36;color:white;font-weight:600}
+.viyan-mobile-booking a:first-child{flex:0 0 30%;background:#eef2e8;color:#184c36}
+.wow{visibility:visible!important;animation:none!important}
+}
+@media(min-width:576px){.viyan-mobile-booking{display:none}}
+@media(max-width:991px){.main-header .nav-outer{width:100%;margin:0!important}.main-menu .navbar-header{width:100%;display:flex;align-items:center;justify-content:space-between}.main-menu{width:100%}.main-header .logo-outer{display:none}}
+@media(max-width:991px){.main-menu .navbar-collapse .navigation,.main-menu .navbar-collapse .navigation li,.main-menu .navbar-collapse .navigation li a{background:#18251e!important;color:#fff!important}.main-menu .navbar-collapse .navigation li{border-color:#ffffff20!important}}
+
