@@ -1,0 +1,456 @@
+/*----------------------------------------------------------------------
+    Viyan Stays Brand Color Override
+    Overrides the Qomfort theme CSS variables with the
+    Viyan Stays brand color palette.
+    
+    Original Qomfort primary: #AB6034 = rgb(171, 96, 52)
+    Viyan primary:           #184C36 = rgb(24, 76, 54)
+----------------------------------------------------------------------*/
+
+body {
+    background-color: var(--lighter-color);
+    /* Viyan Stays Brand Colors */
+    --base-color: #222222;        /* Text Charcoal */
+    --heading-color: #222222;     /* Text Charcoal */
+    --primary-color: #184C36;     /* Primary Forest Green */
+    --secondary-color: #A5B436;   /* Secondary Olive Green */
+    --lighter-color: #FAF9F6;     /* Background Warm Ivory */
+    --black-color: #222222;       /* Text Charcoal */
+    --border-color: #D9DFE7;      /* Kept neutral border tone */
+    --accent-color: #D4AF37;      /* Accent Gold (used only if referenced) */
+}
+
+/* === Utility class overrides === */
+/* Original .bgc-secondary incorrectly uses --primary-color; fix to use --secondary-color */
+.bgc-secondary {
+    background-color: var(--secondary-color) !important;
+}
+
+/* Original .color-secondary incorrectly uses --primary-color; fix to use --secondary-color */
+.color-secondary {
+    color: var(--secondary-color) !important;
+}
+
+/* === Hard-coded #AB6034 color replacements === */
+.ratting i {
+    color: var(--primary-color);
+}
+
+.social-style-four a {
+    color: #184C36;
+}
+
+/* === Slider shape gradient backgrounds === */
+/* Original: rgba(171, 96, 52, 0) → rgba(171, 96, 52, 0.2) */
+/* Viyan:    rgba(24, 76, 54, 0) → rgba(24, 76, 54, 0.2) */
+.slider-shapes:before,
+.slider-shapes:after {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(13.33%, rgba(24, 76, 54, 0)), to(rgba(24, 76, 54, 0.2)));
+    background: -webkit-linear-gradient(top, rgba(24, 76, 54, 0) 13.33%, rgba(24, 76, 54, 0.2) 100%);
+    background: -o-linear-gradient(top, rgba(24, 76, 54, 0) 13.33%, rgba(24, 76, 54, 0.2) 100%);
+    background: linear-gradient(180deg, rgba(24, 76, 54, 0) 13.33%, rgba(24, 76, 54, 0.2) 100%);
+}
+
+/* === About section icon box-shadow === */
+/* Original: box-shadow: 0px 10px 50px rgba(171, 96, 52, 0.5) */
+.about-image-part .top-part .icon {
+    -webkit-box-shadow: 0px 10px 50px rgba(24, 76, 54, 0.5);
+    box-shadow: 0px 10px 50px rgba(24, 76, 54, 0.5);
+}
+
+/* === Counter section decorative triangle shapes === */
+/* Original: background: rgba(171, 96, 52, 0.05) */
+.triangle-shapes,
+.triangle-shapes:before,
+.triangle-shapes-two,
+.triangle-shapes-two:after,
+.triangle-shapes-two:before {
+    background: rgba(24, 76, 54, 0.05);
+}
+
+/* === Room calendar highlight === */
+/* Original: background: rgba(171, 96, 52, 0.1) */
+.room-calendar.fc .fc-highlight {
+    background: rgba(24, 76, 54, 0.1);
+}
+
+/* === Instagram hover overlay === */
+/* Original: background: rgba(171, 96, 52, 0.85) */
+.instagram-item .instagram-gallery .icon {
+    background: rgba(24, 76, 54, 0.85);
+}
+
+/* === Gallery item overlay === */
+/* Original: background: rgba(171, 96, 52, 0.85) */
+.gallery-item .over-content {
+    background: rgba(24, 76, 54, 0.85);
+}
+
+/* === Tag cloud backgrounds === */
+/* Original: background: rgba(171, 96, 52, 0.2) */
+.tag-coulds a:not(:hover) {
+    background: rgba(24, 76, 54, 0.2);
+}
+
+/* === Viyan header corrections === */
+.main-header .logo-outer {
+    width: 380px;
+    height: 78px;
+}
+
+@media only screen and (min-width: 992px) {
+    .main-header .logo-outer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .main-header .logo {
+        width: 310px;
+        margin-right: 0;
+        padding: 0;
+    }
+
+    .main-header .logo a,
+    .main-header .logo img {
+        display: block;
+    }
+
+    .main-header .logo img {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-header .menu-sidebar {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .main-header .menu-btns {
+        gap: 28px;
+        white-space: nowrap;
+    }
+
+    .main-header .menu-btns .theme-btn {
+        margin-left: 0;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .main-header .menu-phone-number {
+        gap: 10px;
+        white-space: nowrap;
+    }
+
+    .main-header .menu-phone-number i {
+        margin-right: 0;
+        font-size: 20px;
+        line-height: 1;
+    }
+}
+
+.main-header .main-menu .navigation > li > a {
+    -webkit-transition: color 0.25s ease, -webkit-transform 0.25s ease;
+    transition: color 0.25s ease, -webkit-transform 0.25s ease;
+    -o-transition: color 0.25s ease, transform 0.25s ease;
+    transition: color 0.25s ease, transform 0.25s ease;
+    transition: color 0.25s ease, transform 0.25s ease, -webkit-transform 0.25s ease;
+}
+
+.main-header .main-menu .navigation > li > a:hover {
+    color: #A5B436;
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
+}
+
+/* === Footer / section wave shape gradient backgrounds === */
+/* Original: rgba(171, 96, 52, 0) → rgba(171, 96, 52, 0.2) */
+/* Viyan:    rgba(24, 76, 54, 0) → rgba(24, 76, 54, 0.2) */
+.wave-shapes:before,
+.wave-shapes:after,
+.wave-shapes-two:before,
+.wave-shapes-two:after {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(13.33%, rgba(24, 76, 54, 0)), to(rgba(24, 76, 54, 0.2)));
+    background: -webkit-linear-gradient(top, rgba(24, 76, 54, 0) 13.33%, rgba(24, 76, 54, 0.2) 100%);
+    background: -o-linear-gradient(top, rgba(24, 76, 54, 0) 13.33%, rgba(24, 76, 54, 0.2) 100%);
+    background: linear-gradient(180deg, rgba(24, 76, 54, 0) 13.33%, rgba(24, 76, 54, 0.2) 100%);
+}
+
+/* === Form focus states === */
+.contact-page-form .form-group .form-control:focus,
+.comment-form .form-control:focus,
+.widget-search form input:focus {
+    -webkit-box-shadow: 0 0 0 1px var(--primary-color);
+    box-shadow: 0 0 0 1px var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/*======================================================================
+    Viyan Stays — Property Snapshot Section
+    Minimal, premium counter-style display with shimmer animation.
+======================================================================*/
+
+.property-snapshot-area {
+    padding: 75px 0 50px;
+    background: var(--lighter-color);
+}
+
+.property-snapshot-area .snapshot-item {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 26px 10px;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    border-radius: 8px;
+}
+
+.property-snapshot-area .snapshot-item:hover {
+    -webkit-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px);
+}
+
+.property-snapshot-area .snapshot-number {
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--primary-color);
+    display: inline-block;
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.property-snapshot-area .snapshot-number .count-text {
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    background: transparent;
+    padding: 0;
+    line-height: 1;
+}
+
+.property-snapshot-area .snapshot-number .count-text:after {
+    display: none;
+}
+
+.property-snapshot-area .snapshot-label {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1.75px;
+    margin-bottom: 0;
+}
+
+.property-snapshot-scroll {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+}
+
+.property-snapshot-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.property-snapshot-scroll .row {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    min-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+.property-snapshot-scroll .row > .col {
+    width: 190px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 190px;
+    flex: 0 0 190px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+/* Shimmer effect on numbers after count-up */
+@-webkit-keyframes viyan-shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+
+@keyframes viyan-shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+
+.property-snapshot-area .snapshot-number.shimmer {
+    background: -webkit-linear-gradient(110deg, var(--primary-color) 40%, var(--secondary-color) 50%, var(--primary-color) 60%);
+    background: -o-linear-gradient(110deg, var(--primary-color) 40%, var(--secondary-color) 50%, var(--primary-color) 60%);
+    background: linear-gradient(110deg, var(--primary-color) 40%, var(--secondary-color) 50%, var(--primary-color) 60%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (min-width: 992px) {
+    .property-snapshot-scroll {
+        overflow: visible;
+    }
+
+    .property-snapshot-scroll .row {
+        width: auto;
+        min-width: 0;
+        margin-left: calc(var(--bs-gutter-x) * -0.5);
+        margin-right: calc(var(--bs-gutter-x) * -0.5);
+    }
+
+    .property-snapshot-scroll .row > .col {
+        width: 20%;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .property-snapshot-area .snapshot-number {
+        font-size: 52px;
+    }
+    .property-snapshot-area .snapshot-label {
+        font-size: 13px;
+    }
+}
+
+/*======================================================================
+    Viyan Stays — CTA Section
+======================================================================*/
+
+.viyan-cta-area {
+    position: relative;
+    padding: 60px 0;
+    background: var(--primary-color);
+    overflow: hidden;
+}
+
+.viyan-cta-area .cta-content h2 {
+    color: #ffffff;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.viyan-cta-area .cta-content p {
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 0;
+    font-size: 17px;
+}
+
+.viyan-cta-area .cta-btns {
+    text-align: right;
+}
+
+.viyan-cta-area .cta-btns .theme-btn {
+    margin-left: 12px;
+    margin-bottom: 10px;
+}
+
+.viyan-cta-area .cta-btns .theme-btn.style-two {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    color: #ffffff;
+}
+
+.viyan-cta-area .cta-btns .theme-btn.style-two:hover {
+    background: #ffffff;
+    color: var(--primary-color);
+}
+
+@media only screen and (max-width: 991px) {
+    .viyan-cta-area .cta-btns {
+        text-align: left;
+        margin-top: 20px;
+    }
+    .viyan-cta-area .cta-content h2 {
+        font-size: 28px;
+    }
+}
+
+/*======================================================================
+    Viyan Stays — Location Highlights
+======================================================================*/
+
+.location-highlight-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 18px 22px;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.location-highlight-item:hover {
+    border-color: var(--primary-color);
+    -webkit-box-shadow: 0 8px 30px rgba(24, 76, 54, 0.1);
+    box-shadow: 0 8px 30px rgba(24, 76, 54, 0.1);
+}
+
+.location-highlight-item .icon {
+    width: 50px;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: rgba(24, 76, 54, 0.1);
+    border-radius: 50%;
+    margin-right: 16px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50px;
+    flex: 0 0 50px;
+}
+
+.location-highlight-item .icon i {
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+.location-highlight-item .content h5 {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+
+.location-highlight-item .content span {
+    font-size: 14px;
+    color: var(--base-color);
+    opacity: 0.75;
+}

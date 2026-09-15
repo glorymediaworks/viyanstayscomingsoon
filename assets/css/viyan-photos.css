@@ -1,0 +1,34 @@
+/* Property photography: preserve original files and frame them responsively. */
+.slider-image {overflow:hidden;border-radius:4px;}
+.slider-image img {display:block;width:100%;height:clamp(340px,42vw,680px);object-fit:cover;object-position:center;}
+.about-image-part .top-part > img {width:78%;height:440px;object-fit:cover;object-position:center;}
+.about-image-part .bottom-part > img {width:70%;height:300px;object-fit:cover;}
+.room-item .image {overflow:hidden;}
+.room-item .image img {width:100%;height:320px;object-fit:cover;}
+.hotel-item .image {overflow:hidden;}
+.hotel-item .image img {width:100%;height:100%;min-height:380px;object-fit:cover;}
+.video-part {overflow:hidden;border-radius:4px;}
+.video-part > img {width:100%;height:clamp(280px,42vw,620px);object-fit:cover;}
+#gallery .blog-grid-item .image img {width:100%;height:280px;object-fit:cover;}
+.faq-image-part > img {width:100%;height:510px;object-fit:cover;}
+.viyan-host-mark,.viyan-guest-mark {display:inline-flex;align-items:center;justify-content:center;border-radius:50%;background:#184c36;color:#fff;font-family:Georgia,serif;flex-shrink:0;}
+.viyan-host-mark {width:65px;height:65px;font-size:36px;}
+.viyan-guest-mark {width:65px;height:65px;font-size:22px;border:1px solid #b1bc83;margin-right:20px;}
+.testi-thumb-item .viyan-guest-mark {width:75px;height:75px;margin:0;}
+.about-author .signature img {width:125px;height:auto;}
+.viyan-photo-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:22px 0 55px;}
+.viyan-photo-link {position:relative;display:block;overflow:hidden;border-radius:4px;aspect-ratio:4/3;background:#184c36;}
+.viyan-photo-link img {width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+.viyan-photo-link span {position:absolute;inset:auto 0 0;padding:45px 22px 20px;background:linear-gradient(transparent,rgba(10,28,20,.82));color:white;font-size:19px;}
+.viyan-photo-link:hover img {transform:scale(1.04);}
+.viyan-photo-link:focus-visible {outline:3px solid #a5b436;outline-offset:4px;}
+@media(max-width:767px){.slider-image img{height:350px}.about-image-part .top-part > img{height:330px}.about-image-part .bottom-part > img{height:230px}.viyan-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.viyan-photo-link span{font-size:15px;padding:35px 12px 12px}.room-item .image img{height:280px}.hotel-item .image img{min-height:280px}.faq-image-part > img{height:350px}}
+@media(prefers-reduced-motion:reduce){.viyan-photo-link img{transition:none}}
+/* Keep contact details readable on the dark footer. */
+.main-footer .widget_newsletter .footer-title,
+.main-footer .widget_newsletter .list-style-one,
+.main-footer .widget_newsletter .list-style-one li,
+.main-footer .widget_newsletter .list-style-one a,
+.main-footer .widget_newsletter .list-style-one i {color:#ffffff;}
+.main-footer .widget_newsletter .list-style-one a:hover,
+.main-footer .widget_newsletter .list-style-one a:focus-visible {color:#d2df8a;}
