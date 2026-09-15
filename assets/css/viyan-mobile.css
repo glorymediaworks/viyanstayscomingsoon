@@ -97,3 +97,17 @@ h3{font-size:25px}h4{font-size:22px}
 .property-snapshot-area .snapshot-number .count-text:before{content:attr(data-stop);font-size:112px;font-weight:900;line-height:1}
 .property-snapshot-area .snapshot-label{font-size:17px;font-weight:700;letter-spacing:2px;line-height:1.4}
 }
+/* Solid counter text must remain visible after the shimmer class is added. */
+@media(max-width:575px){
+.property-snapshot-area .snapshot-number,
+.property-snapshot-area .snapshot-number.shimmer,
+.property-snapshot-area .snapshot-number .count-text,
+.property-snapshot-area .snapshot-number .count-text:before{color:#184c36!important;-webkit-text-fill-color:#184c36!important;background-image:none!important;background-clip:border-box!important;-webkit-background-clip:border-box!important;animation:none!important;opacity:1!important;visibility:visible!important}
+.main-header .mobile-logo img{width:189.75px;max-width:189.75px;height:auto;display:block}
+.main-header .mobile-logo{margin:0!important;padding:15px 0}
+.main-header .navbar-header{gap:20px}
+.main-header .header-inner{min-height:78px}
+.main-header .container{padding-left:20px;padding-right:20px}
+.main-menu .navbar-header .navbar-toggle{flex-shrink:0;margin-left:auto}
+html{scroll-padding-top:90px}
+}
