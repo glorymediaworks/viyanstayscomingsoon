@@ -84,3 +84,16 @@ h3{font-size:25px}h4{font-size:22px}
 @media(max-width:991px){.main-header .nav-outer{width:100%;margin:0!important}.main-menu .navbar-header{width:100%;display:flex;align-items:center;justify-content:space-between}.main-menu{width:100%}.main-header .logo-outer{display:none}}
 @media(max-width:991px){.main-menu .navbar-collapse .navigation,.main-menu .navbar-collapse .navigation li,.main-menu .navbar-collapse .navigation li a{background:#18251e!important;color:#fff!important}.main-menu .navbar-collapse .navigation li{border-color:#ffffff20!important}}
 
+/* Give each property figure its own bold highlight on phones. */
+@media(max-width:575px){
+.property-snapshot-area{padding:0}
+.property-snapshot-scroll{overflow:visible}
+.property-snapshot-scroll .row{display:flex;flex-direction:column;width:100%;gap:0}
+.property-snapshot-scroll .row>.col{width:100%;flex:0 0 auto;padding:0}
+.property-snapshot-area .snapshot-item{min-height:280px;margin:0;padding:42px 12px;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:0;border-bottom:1px solid #184c361a}
+.property-snapshot-area .snapshot-item:hover{transform:none}
+.property-snapshot-area .snapshot-number{font-size:112px;font-weight:900;line-height:1;margin-bottom:14px;background:none!important;-webkit-text-fill-color:#184c36;color:#184c36}
+.property-snapshot-area .snapshot-number .count-text{font-size:0}
+.property-snapshot-area .snapshot-number .count-text:before{content:attr(data-stop);font-size:112px;font-weight:900;line-height:1}
+.property-snapshot-area .snapshot-label{font-size:17px;font-weight:700;letter-spacing:2px;line-height:1.4}
+}
